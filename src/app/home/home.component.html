@@ -1,0 +1,66 @@
+<h1 style="margin: 0; padding: 10px;">Học Angular 9 của anh Huy Nguyễn.</h1>
+<div id="variable">
+  <div class="inf">Name: {{name}}</div>
+  <div class="inf">Tuổi: {{age}}</div>
+  <div class="inf">Đang sống tại: {{living}}</div>
+  <div class="inf">Tôi tên là: {{name}}, tuổi: {{age}}</div>
+</div>
+<br />
+
+<div id="ngIf">
+  <div *ngIf="age > 18">Tôi hiện tại {{age}} &gt; 18 tuôi </div>
+  <div *ngIf="age < 18">Tôi hiện tại {{age}} &lt; 18 tuôi </div>
+</div>
+<br />
+
+<div id="ngFor">
+  <div id="listFriendName">Danh sách bạn bè tui: </div>
+  <div *ngFor="let itemName of list">
+
+    <!-- <span>{{itemAge}}</span>
+    *ngFor="let itemAge of listFriendAge" -->
+    <span>+</span>
+    <span>Name: {{itemName.name}} | Age: {{itemName.age}}</span>
+    <br />
+
+    <div>Nhap ten:
+      <input [(ngModel)]="itemName.name" /> <br />
+      Nhap tuoi:
+      <input [(ngModel)]="itemName.age" />
+    </div>
+
+  </div>
+  <select>
+    <option *ngFor="let item of listFriendName">
+      {{item}}
+    </option>
+  </select>
+</div>
+
+<!-- ============ TODO LIST =============  -->
+
+<div id="todolist">
+  <h3>Danh sách đồ cần mua: </h3>
+  <div *ngFor="let item of todoList">
+    <span>- {{item}} </span> <br />
+  </div>
+  <div>
+    <input [(ngModel)]="nameTodo">
+  </div>
+  <input type="button" (click)="addItem();" value="Add">
+</div>
+
+<!-- ============ END TODO LIST =============  -->
+<!-- data biding-->
+<div id="form">
+  Nhập lại tên :
+  <input [(ngModel)]="name" /> <br />
+  Nhập lại tuổi:
+  <input [(ngModel)]="age" />
+</div>
+
+
+<div id="event">
+  <!-- onclick -->
+  <button (click)="reset();">RESET</button>
+</div>

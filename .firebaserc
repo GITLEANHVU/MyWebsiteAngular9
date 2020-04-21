@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "lavsite-1412": {
+      "hosting": {
+        "Webapp": [
+          "lavsite-1412"
+        ]
+      }
+    }
+  }
+}

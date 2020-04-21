@@ -1,0 +1,11 @@
+<p>about works!</p>
+<div id="todolist">
+  <h3>Danh sách đồ cần mua: </h3>
+  <div *ngFor="let item of todoList">
+    <span>- {{item}} </span> <br />
+  </div>
+  <div>
+    <input [(ngModel)]="nameTodo">
+  </div>
+  <input type="button" (click)="addItem();" value="Add">
+</div>

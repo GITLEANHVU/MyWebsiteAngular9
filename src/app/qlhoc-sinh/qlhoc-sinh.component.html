@@ -1,0 +1,6 @@
+<h1>Trang quảng lý học sinh</h1>
+<p>qlhoc-sinh works!</p>
+<h3>Danh sach hoc sinh</h3>
+<div *ngFor="let item_t of list">
+  <p>- {{item_t.name}} <span *ngIf="item_t.age !== ' '">Tuoi = {{item_t.age}}</span></p>
+</div>
